@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 3000
 const path = require('path');
 var ejs = require('ejs');
 const fetch = require('node-fetch');
@@ -44,6 +44,6 @@ app.post('/', (req, res) => {
         });
 })
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Example app listening at http://localhost:${PORT}`)
 })
